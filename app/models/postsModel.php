@@ -16,4 +16,5 @@ function findOneById(PDO $connexion, Int $id){
     $rs->bindValue(':id', $id, PDO::PARAM_INT);
     $rs->execute();
     return $rs->fetch(PDO::FETCH_ASSOC);
+    // fetchAll() => renvoie un tableau, fetch renvoie 1 seul rien avoir avec l'arg dynamique
 }
