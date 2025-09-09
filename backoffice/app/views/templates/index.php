@@ -1,14 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>BackOffice</title>
-</head>
-<body>
-  <h1>BackOffice</h1>
-  <main>
-    <?php echo $content; ?>
-  </main>
-</body>
+  <head>
+  <?php include '../app/views/templates/partials/_head.php'; ?>
+  </head>
+
+  <body>
+    <?php include '../app/views/templates/partials/_nav.php'; ?>
+    <?php include '../app/views/templates/partials/_main.php';?>
+    <?php include '../app/views/templates/partials/_script.php'; ?>
+  </body>
 </html>
