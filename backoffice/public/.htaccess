@@ -2,13 +2,15 @@ RewriteEngine on
 
 # ROUTES
 
-# posts.show
+# users.logout
 
-# URL: posts/(id)/slug
+# URL: users/logout
 
-# PATTERN: ?posts=show&id=$1 ($1 fait référence au premier argument entre parenthèse dans notre lien dans rewriteRule)
+# PATTERN: ?users=logout
 
-RewriteRule ^posts/([1-9][0-9]*)/[a-z0-9][a-z0-9\-]*$ index.php?posts=show&id=$1 [L]
+RewriteRule ^users/logout$ index.php?users=logout [L]
 
 
+# --------------------------------------------------------------------------
+RewriteCond %{REQUEST_URI} !\.(js|css|jpg|gif|zip|png|pdf)$ [NC]
 RewriteRule ^(.*)$ index.php [L]

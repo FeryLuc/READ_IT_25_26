@@ -10,5 +10,4 @@ function findOneByEmailAndPassword(PDO $connexion, array $data){
     $rs->bindValue(':password', $data['password'], PDO::PARAM_STR);
     $rs->execute();
     return $rs->fetch(PDO::FETCH_ASSOC);
-
 }
