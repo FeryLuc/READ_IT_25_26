@@ -3,9 +3,19 @@ RewriteEngine on
 # ROUTES
 
 # posts.show
-
 # URL: posts/(id)/slug
-
 # PATTERN: ?posts=show&id=$1 ($1 fait référence au premier argument entre parenthèse dans notre lien dans rewriteRule)
 
 RewriteRule ^posts/([1-9][0-9]*)/[a-z0-9][a-z0-9\-]*$ index.php?posts=show&id=$1 [L]
+
+# users.login-form
+# URL: users/login-form
+# PATTERN: ?users=login-form
+
+RewriteRule ^users/login\-form$ index.php?users=login-form [L]
+
+# users.login
+# URL: users/login
+# PATTERN: ?users=login
+
+RewriteRule ^users/login$ index.php?users=login [L]

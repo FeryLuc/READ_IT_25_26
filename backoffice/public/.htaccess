@@ -9,3 +9,6 @@ RewriteEngine on
 # PATTERN: ?posts=show&id=$1 ($1 fait référence au premier argument entre parenthèse dans notre lien dans rewriteRule)
 
 RewriteRule ^posts/([1-9][0-9]*)/[a-z0-9][a-z0-9\-]*$ index.php?posts=show&id=$1 [L]
+
+
+RewriteRule ^(.*)$ index.php [L]
