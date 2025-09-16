@@ -30,3 +30,10 @@ function addOneAction(){
     include '../app/views/users/addForm.php';
     $content = ob_get_clean();
 }
+
+function createAction($connexion, $data){
+    include '../app/models/usersModel.php';
+    $reponse = UsersModel\create($connexion, $data);
+    header("Location: ".ADMIN_BASE_URL."users");
+        
+}

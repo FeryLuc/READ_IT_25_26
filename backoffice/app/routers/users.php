@@ -15,6 +15,10 @@ switch ($_GET['users']) {
     case 'new':
         UsersController\addOneAction();
         break;
+
+    case 'create':
+        UsersController\createAction($connexion, $_POST);
+        break;
     default:
         # code...
         break;
