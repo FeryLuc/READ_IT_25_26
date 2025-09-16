@@ -13,6 +13,11 @@ RewriteRule ^users/logout$ index.php?users=logout [L]
 #PATTEN: ?users=index
 RewriteRule ^users$ index.php?users=index [L]
 
+#Route
+#users.new
+#URL: users/new
+#PATTERN: ?users=new
+RewriteRule ^users/new$ index.php?users=new [L]
 # --------------------------------------------------------------------------
 RewriteCond %{REQUEST_URI} !\.(js|css|jpg|gif|zip|png|pdf)$ [NC]
 RewriteRule ^(.*)$ index.php [L]

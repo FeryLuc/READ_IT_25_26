@@ -11,6 +11,10 @@ switch ($_GET['users']) {
     case 'index':
     UsersController\indexAction($connexion);
     break;
+
+    case 'new':
+        UsersController\addOneAction();
+        break;
     default:
         # code...
         break;

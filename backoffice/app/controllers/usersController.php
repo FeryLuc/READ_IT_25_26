@@ -20,3 +20,13 @@ function indexAction(PDO $connexion){
     $content = ob_get_clean();
     
 }
+
+function addOneAction(){
+    global $content, $title;
+
+    $title = "Ajout d'un utilisateur";
+
+    ob_start();
+    include '../app/views/users/addForm.php';
+    $content = ob_get_clean();
+}
